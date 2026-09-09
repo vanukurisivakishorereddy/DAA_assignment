@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search Algorithm Performance Analyzer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- ============================== -->
+    <!-- NAVIGATION -->
+    <!-- ============================== -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+
+            <div class="brand">
+                <span class="brand-mark">&#128269;</span>
+                <span class="brand-text">Search Algorithm<br>Performance Analyzer</span>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <button class="nav-link active" data-page="home">Home</button>
+                <button class="nav-link" data-page="about-searches">Algorithms</button>
+                <button class="nav-link" data-page="graph">Graph</button>
+                <button class="nav-link" data-page="visualizer">Visualizer</button>
+                <button class="nav-link" data-page="about">About</button>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- ============================== -->
+    <!-- PAGE: HOME -->
+    <!-- ============================== -->
+    <main class="page active" id="page-home">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-inner">
+
+                <p class="hero-kicker">Compare &bull; Analyze &bull; Visualize</p>
+
+                <h1 class="hero-title">
+                    Search Algorithm<br>Performance Analyzer
+                </h1>
+
+                <p class="hero-subtitle">
+                    An interactive tool for understanding and comparing the
+                    performance of Linear Search and Binary Search.
+                </p>
+
+                <div class="hero-actions">
+                    <button class="btn btn-primary" data-goto="about-searches">
+                        Explore Algorithms
+                    </button>
+                    <button class="btn btn-ghost" data-goto="visualizer">
+                        Open Visualizer
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="hero-glow"></div>
+        </section>
+
+
+        <div class="container">
+
+            <!-- About the project -->
+            <section class="block">
+
+                <h2 class="block-title">About the Project</h2>
+
+                <p class="block-lead">
+                    This is an interactive web-based project built to compare
+                    Linear Search and Binary Search side by side &mdash; both
+                    through their theoretical time complexity and through
+                    practical, measured execution performance. Instead of
+                    reading Big-O notation on a slide, you can watch the two
+                    algorithms work and see the numbers that back the theory.
+                </p>
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <span class="feature-icon">&#128269;</span>
+                        <h3>Search</h3>
+                        <p>Compare Linear Search and Binary Search side by side.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">&#128202;</span>
+                        <h3>Analyze</h3>
+                        <p>Understand O(n) and O(log n) complexity with real numbers.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">&#127919;</span>
+                        <h3>Visualize</h3>
+                        <p>See how each algorithm searches through an array, step by step.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Objectives -->
+            <section class="block">
+
+                <h2 class="block-title">Project Objectives</h2>
+
+                <ul class="objectives-list">
+                    <li><span class="objective-check">&#10003;</span> Understand Linear Search</li>
+                    <li><span class="objective-check">&#10003;</span> Understand Binary Search</li>
+                    <li><span class="objective-check">&#10003;</span> Compare time complexity</li>
+                    <li><span class="objective-check">&#10003;</span> Measure execution time</li>
+                    <li><span class="objective-check">&#10003;</span> Visualize searching operations</li>
+                    <li><span class="objective-check">&#10003;</span> Understand O(n) vs O(log n)</li>
+                </ul>
+
+            </section>
+
+            <!-- Technologies -->
+            <section class="block">
+
+                <h2 class="block-title">Technologies Used</h2>
+
+                <div class="tech-badges">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Chart.js</span>
+                </div>
+
+            </section>
+
+            <!-- Why this project -->
+            <section class="block block-why">
+
+                <h2 class="block-title">Why This Project?</h2>
+
+                <p class="block-lead">
+                    Every piece of software searches through data, and the
+                    algorithm behind that search decides whether an app feels
+                    instant or sluggish once the data grows. Seeing Linear
+                    Search and Binary Search run against the same input, and
+                    watching the gap between O(n) and O(log n) widen as N
+                    grows, builds the kind of intuition for algorithmic
+                    efficiency that's hard to get from a textbook alone.
+                </p>
+
+            </section>
+
+            <!-- Authors -->
+            <section class="block">
+
+                <h2 class="block-title">Project Authors</h2>
+
+                <div class="authors-grid">
+
+                    <div class="author-card">
+                        <div class="author-avatar">VS</div>
+                        <h3>Vanukuri Siva Kishore Reddy</h3>
+                        <p class="author-meta">Roll No. / ID: 92400118581</p>
+                    </div>
+
+                    <div class="author-card">
+                        <div class="author-avatar">VT</div>
+                        <h3>Trinadh Reddy Vasipalli</h3>
+                        <p class="author-meta">Roll No. / ID: 92400118626</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ============================== -->
+    <!-- PAGE: ABOUT SEARCHES -->
+    <!-- ============================== -->
+    <main class="page" id="page-about-searches">
+
+        <div class="container">
+
+            <header class="page-header">
+                <h1>About the Searches</h1>
+                <p>How each algorithm works, its complexity, and how they stack up against each other.</p>
+            </header>
+
+            <!-- Linear Search -->
+            <section class="block algo-block algo-linear">
+
+                <div class="algo-block-head">
+                    <span class="algo-dot algo-dot-linear"></span>
+                    <h2>Linear Search</h2>
+                </div>
+
+                <p class="block-lead">
+                    Linear Search checks elements one by one from the
+                    beginning of the array until it finds the target &mdash;
+                    no assumptions about order required.
+                </p>
+
+                <dl class="complexity-list">
+                    <div><dt>Best Case</dt><dd>O(1)</dd></div>
+                    <div><dt>Average Case</dt><dd>O(n)</dd></div>
+                    <div><dt>Worst Case</dt><dd>O(n)</dd></div>
+                    <div><dt>Space Complexity</dt><dd>O(1)</dd></div>
+                </dl>
+
+                <div class="visual-example linear-example">
+                    <div class="visual-example-track">
+                        <span class="visual-node">10</span>
+                        <span class="visual-arrow">&rarr;</span>
+                        <span class="visual-node">25</span>
+                        <span class="visual-arrow">&rarr;</span>
+                        <span class="visual-node">30</span>
+                        <span class="visual-arrow">&rarr;</span>
+                        <span class="visual-node visual-node-hit">45</span>
+                    </div>
+                    <p class="visual-caption">Target Found at index 3, after 4 comparisons.</p>
+                </div>
+
+            </section>
+
+            <!-- Binary Search -->
+            <section class="block algo-block algo-binary">
+
+                <div class="algo-block-head">
+                    <span class="algo-dot algo-dot-binary"></span>
+                    <h2>Binary Search</h2>
+                </div>
+
+                <p class="block-lead">
+                    Binary Search works on a <strong>sorted</strong> array. It
+                    checks the middle element and discards the half of the
+                    array that can't contain the target, repeating until the
+                    target is found.
+                </p>
+
+                <dl class="complexity-list">
+                    <div><dt>Best Case</dt><dd>O(1)</dd></div>
+                    <div><dt>Average Case</dt><dd>O(log n)</dd></div>
+                    <div><dt>Worst Case</dt><dd>O(log n)</dd></div>
+                    <div><dt>Space Complexity</dt><dd>O(1)</dd></div>
+                </dl>
+
+                <div class="visual-example binary-example">
+                    <div class="visual-example-row">
+                        <span class="visual-node">10</span>
+                        <span class="visual-node">20</span>
+                        <span class="visual-node">30</span>
+                        <span class="visual-node visual-node-mid">40</span>
+                        <span class="visual-node">50</span>
+                        <span class="visual-node">60</span>
+                        <span class="visual-node">70</span>
+                    </div>
+                    <p class="visual-caption">
+                        Target 60 &gt; 40 &mdash; the left half
+                        <span class="visual-strike">[10, 20, 30]</span>
+                        is discarded in one step.
+                    </p>
+                    <div class="visual-example-row">
+                        <span class="visual-node visual-node-out">10</span>
+                        <span class="visual-node visual-node-out">20</span>
+                        <span class="visual-node visual-node-out">30</span>
+                        <span class="visual-node visual-node-out">40</span>
+                        <span class="visual-node">50</span>
+                        <span class="visual-node visual-node-hit">60</span>
+                        <span class="visual-node">70</span>
+                    </div>
+                    <p class="visual-caption">Target Found at index 5, in just 2 comparisons.</p>
+                </div>
+
+            </section>
+
+            <!-- Comparison table -->
+            <section class="block">
+
+                <h2 class="block-title">Linear Search vs Binary Search</h2>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th class="th-linear">Linear Search</th>
+                                <th class="th-binary">Binary Search</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Data Requirement</td>
+                                <td>Works on any order</td>
+                                <td>Requires sorted data</td>
+                            </tr>
+                            <tr>
+                                <td>Searching Method</td>
+                                <td>Checks every element in sequence</td>
+                                <td>Repeatedly halves the search space</td>
+                            </tr>
+                            <tr>
+                                <td>Best Case</td>
+                                <td>O(1)</td>
+                                <td>O(1)</td>
+                            </tr>
+                            <tr>
+                                <td>Average Case</td>
+                                <td>O(n)</td>
+                                <td>O(log n)</td>
+                            </tr>
+                            <tr>
+                                <td>Worst Case</td>
+                                <td>O(n)</td>
+                                <td>O(log n)</td>
+                            </tr>
+                            <tr>
+                                <td>Space Complexity</td>
+                                <td>O(1)</td>
+                                <td>O(1)</td>
+                            </tr>
+                            <tr>
+                                <td>Large Dataset Performance</td>
+                                <td>Slows down linearly</td>
+                                <td>Stays fast &mdash; grows logarithmically</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ============================== -->
+    <!-- PAGE: GRAPH -->
+    <!-- ============================== -->
+    <main class="page" id="page-graph">
+
+        <div class="container">
+
+            <header class="page-header">
+                <h1>Algorithm Performance Comparison</h1>
+                <p>Theoretical operation counts alongside a real, measured benchmark run in your browser.</p>
+            </header>
+
+            <!-- Controls -->
+            <section class="block">
+
+                <h2 class="block-title">Controls</h2>
+
+                <div class="controls-grid">
+
+                    <div class="form-group">
+                        <label for="testCase">Test Case</label>
+                        <select id="testCase">
+                            <option value="best">Best Case</option>
+                            <option value="average">Average Case</option>
+                            <option value="worst" selected>Worst Case</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customSize">Input Size (N)</label>
+                        <input type="number" id="customSize" value="500" min="1" step="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="trialsCount">Trials per Size (Benchmark)</label>
+                        <input type="number" id="trialsCount" value="200" min="1" step="1">
+                    </div>
+
+                </div>
+
+                <div class="form-group form-group-wide">
+                    <label for="referenceSizes">Reference Sizes (comma-separated)</label>
+                    <input type="text" id="referenceSizes" value="100, 200, 400, 600, 800, 1000, 1500, 2000">
+                </div>
+
+                <div class="buttons">
+                    <button id="customCalcButton" class="btn btn-primary">Calculate</button>
+                    <button id="runBenchmarkButton" class="btn btn-primary">Run Measured Benchmark</button>
+                    <button id="updateSizesButton" class="btn btn-ghost">Update Table &amp; Graphs</button>
+                    <button id="resetButton" class="btn btn-ghost">Reset</button>
+                </div>
+
+            </section>
+
+            <!-- Theoretical -->
+            <section class="block">
+
+                <h2 class="block-title">Theoretical Complexity</h2>
+
+                <p class="section-note">
+                    Calculated straight from the Big-O formulas &mdash; Linear
+                    Search is O(n), Binary Search is O(log n). No timing, no
+                    hardware noise.
+                </p>
+
+                <div class="result-container">
+
+                    <div class="result-box linear-box">
+                        <h3>Linear Search</h3>
+                        <p class="complexity-tag">Time Complexity <strong>O(n)</strong></p>
+                        <p class="exec-value"><span id="customLinearOps">&mdash;</span></p>
+                        <p class="exec-caption">comparisons for the selected test case</p>
+                    </div>
+
+                    <div class="result-box binary-box">
+                        <h3>Binary Search</h3>
+                        <p class="complexity-tag">Time Complexity <strong>O(log n)</strong></p>
+                        <p class="exec-value"><span id="customBinaryOps">&mdash;</span></p>
+                        <p class="exec-caption">comparisons for the selected test case</p>
+                    </div>
+
+                </div>
+
+                <div id="customComparisonResult" class="callout" role="status">
+                    Enter a size above and click Calculate.
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Input Size</th>
+                                <th class="th-linear">Linear Search &mdash; O(n)</th>
+                                <th class="th-binary">Binary Search &mdash; O(log n)</th>
+                                <th>Binary Advantage</th>
+                            </tr>
+                        </thead>
+                        <tbody id="complexityTable">
+                            <tr><td colspan="4" class="empty-row">Calculating&hellip;</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="complexityChart"></canvas>
+                </div>
+
+            </section>
+
+             <!-- Stat cards -->
+            <section class="block">
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <span class="stat-label">Input Size</span>
+                        <span class="stat-value" id="statInputSize">500</span>
+                    </div>
+
+                    <div class="stat-card stat-card-linear">
+                        <span class="stat-label">Linear Search Time</span>
+                        <span class="stat-value" id="statLinearTime">&mdash;</span>
+                    </div>
+
+                    <div class="stat-card stat-card-binary">
+                        <span class="stat-label">Binary Search Time</span>
+                        <span class="stat-value" id="statBinaryTime">&mdash;</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-label">Faster Algorithm</span>
+                        <span class="stat-value" id="statFaster">&mdash;</span>
+                    </div>
+
+                </div>
+
+            </section>
+            
+            <!-- Measured -->
+            <section class="block">
+
+                <h2 class="block-title">Measured Performance</h2>
+
+                <p class="section-note">
+                    This runs the real Linear Search and Binary Search code in
+                    your browser against sorted arrays of each reference size,
+                    repeated for the trial count above, and reports the
+                    average wall-clock time per run using
+                    <code>performance.now()</code>. Click "Run Measured
+                    Benchmark" above to generate it.
+                </p>
+
+                <div id="benchmarkStatus" class="callout">
+                    No benchmark run yet.
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Input Size</th>
+                                <th class="th-linear">Linear Search (ms/run)</th>
+                                <th class="th-binary">Binary Search (ms/run)</th>
+                                <th>Faster</th>
+                            </tr>
+                        </thead>
+                        <tbody id="benchmarkTable">
+                            <tr><td colspan="4" class="empty-row">Run the benchmark to see measured results.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="benchmarkChart"></canvas>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ============================== -->
+    <!-- PAGE: VISUALIZER -->
+    <!-- ============================== -->
+    <main class="page" id="page-visualizer">
+
+        <div class="container">
+
+            <header class="page-header">
+                <h1>Search Visualizer</h1>
+                <p>Watch each comparison the way the algorithm actually sees it.</p>
+            </header>
+
+            <section class="block">
+
+                <div class="controls-grid controls-grid-visualizer">
+
+                    <div class="form-group">
+                        <label for="visualizerAlgorithm">Algorithm</label>
+                        <select id="visualizerAlgorithm">
+                            <option value="linear">Linear Search</option>
+                            <option value="binary">Binary Search</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="arrayInput">Array (comma-separated)</label>
+                        <input type="text" id="arrayInput" value="10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="targetValue">Target</label>
+                        <input type="number" id="targetValue" value="60" step="10">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="speedSlider">Animation Speed</label>
+                        <input type="range" id="speedSlider" min="1" max="5" value="3" step="1">
+                    </div>
+
+                </div>
+
+                <div class="buttons">
+                    <button id="randomizeButton" class="btn btn-ghost">Randomize Array</button>
+                    <button id="playButton" class="btn btn-primary">Play</button>
+                    <button id="stepButton" class="btn btn-primary">Next Step</button>
+                    <button id="pauseButton" class="btn btn-ghost" disabled>Pause</button>
+                    <button id="visualizerReset" class="btn btn-ghost">Reset</button>
+                </div>
+
+                <div id="arrayContainer" class="array-container"></div>
+
+                <div class="exec-state-panel">
+
+                    <div class="exec-state-grid">
+                        <div class="exec-state-item">
+                            <span class="exec-state-key">Current Index</span>
+                            <span class="exec-state-val" id="stateCurrentIndex">&mdash;</span>
+                        </div>
+                        <div class="exec-state-item">
+                            <span class="exec-state-key">Current Element</span>
+                            <span class="exec-state-val" id="stateCurrentElement">&mdash;</span>
+                        </div>
+                        <div class="exec-state-item">
+                            <span class="exec-state-key">Comparisons</span>
+                            <span class="exec-state-val" id="comparisonsCount">0</span>
+                        </div>
+                        <div class="exec-state-item">
+                            <span class="exec-state-key">Steps</span>
+                            <span class="exec-state-val" id="stateSteps">0</span>
+                        </div>
+                        <div class="exec-state-item exec-state-item-wide">
+                            <span class="exec-state-key">Search Status</span>
+                            <span class="exec-state-val" id="stateStatus">Idle</span>
+                        </div>
+                    </div>
+
+                    <div id="visualizerMessage" class="visualizer-message" role="status">
+                        Click "Next Step" or "Play" to start.
+                    </div>
+
+                </div>
+
+                <div class="legend">
+                    <span class="legend-item"><span class="legend-swatch legend-current"></span> Current / Middle</span>
+                    <span class="legend-item"><span class="legend-swatch legend-checked"></span> Checked / Eliminated</span>
+                    <span class="legend-item"><span class="legend-swatch legend-found"></span> Found</span>
+                </div>
+
+            </section>
+
+            <!-- Trace Logic Reference -->
+            <section class="block">
+
+                <h2 class="block-title">Trace Logic Reference</h2>
+
+                <div class="trace-logic-grid">
+
+                    <div class="trace-panel trace-panel-linear">
+                        <h3><span class="trace-dot linear-dot"></span> Linear Search Trace Logic</h3>
+                        <p>In an array like <code>[10, 20, 30, 40, 50]</code> searching for target <code>40</code>:</p>
+                        <ol class="trace-log">
+                            <li><code>Index 0: 10 &ne; 40 &rarr; Continue</code></li>
+                            <li><code>Index 1: 20 &ne; 40 &rarr; Continue</code></li>
+                            <li><code>Index 2: 30 &ne; 40 &rarr; Continue</code></li>
+                            <li class="trace-hit"><code>Index 3: 40 == 40 &rarr; Target Found!</code></li>
+                        </ol>
+                    </div>
+
+                    <div class="trace-panel trace-panel-binary">
+                        <h3><span class="trace-dot binary-dot"></span> Binary Search Trace Logic</h3>
+                        <p>In a sorted array <code>[10, 20, 30, 40, 50, 60, 70]</code> searching for target <code>60</code>:</p>
+                        <ol class="trace-log">
+                            <li><code>Middle element = 40</code></li>
+                            <li><code>Target 60 &gt; 40 &rarr; Discard left half</code></li>
+                            <li><code>Sub-array [50, 60, 70], Middle = 60</code></li>
+                            <li class="trace-hit"><code>Target 60 == 60 &rarr; Target Found in 2 steps!</code></li>
+                        </ol>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ============================== -->
+    <!-- PAGE: ABOUT -->
+    <!-- ============================== -->
+    <main class="page" id="page-about">
+
+        <div class="container">
+
+            <header class="page-header">
+                <h1>About This Project</h1>
+                <p>The reasoning, learning outcomes, and roadmap behind the analyzer.</p>
+            </header>
+
+            <section class="block">
+                <h2 class="block-title">About This Project</h2>
+                <p class="block-lead">
+                    Search Algorithm Performance Analyzer is a data structures
+                    and algorithms project that compares Linear Search and
+                    Binary Search from two angles at once: the theoretical
+                    Big-O complexity you'd derive on paper, and a real,
+                    measured benchmark of the algorithms actually running in
+                    the browser. A dedicated visualizer then lets you step or
+                    play through each comparison the algorithm makes.
+                </p>
+            </section>
+
+            <section class="block">
+                <h2 class="block-title">Why This Project?</h2>
+                <p class="block-lead">
+                    Search is one of the most common operations in software,
+                    and the difference between O(n) and O(log n) is the
+                    difference between an app that stays fast as data grows
+                    and one that doesn't. Understanding search algorithm
+                    performance &mdash; not just memorizing the notation, but
+                    seeing it play out &mdash; is a foundational skill for
+                    writing efficient software and for technical interviews
+                    alike.
+                </p>
+            </section>
+
+            <section class="block">
+                <h2 class="block-title">Learning Outcomes</h2>
+                <p class="section-note">Students working through this project will come away understanding:</p>
+                <ul class="objectives-list">
+                    <li><span class="objective-check">&#10003;</span> Searching algorithms</li>
+                    <li><span class="objective-check">&#10003;</span> Time complexity</li>
+                    <li><span class="objective-check">&#10003;</span> Space complexity</li>
+                    <li><span class="objective-check">&#10003;</span> Algorithm efficiency</li>
+                    <li><span class="objective-check">&#10003;</span> O(n)</li>
+                    <li><span class="objective-check">&#10003;</span> O(log n)</li>
+                    <li><span class="objective-check">&#10003;</span> Practical vs theoretical performance</li>
+                </ul>
+            </section>
+
+            <section class="block">
+                <h2 class="block-title">Future Enhancements</h2>
+                <ul class="future-list">
+                    <li>Add more searching algorithms (jump search, interpolation search)</li>
+                    <li>Add sorting algorithms and their own comparisons</li>
+                    <li>Support larger datasets and streamed benchmarking</li>
+                    <li>Add more visualization controls (step back, breakpoints)</li>
+                    <li>Generate downloadable performance reports</li>
+                </ul>
+            </section>
+
+            <section class="block">
+                <h2 class="block-title">Project Team</h2>
+                <div class="authors-grid">
+                    <div class="author-card">
+                        <div class="author-avatar">VS</div>
+                        <h3>Vanukuri Siva Kishore Reddy</h3>
+                        <p class="author-meta">Roll No. / ID: 92400118581</p>
+                    </div>
+                    <div class="author-card">
+                        <div class="author-avatar">VT</div>
+                        <h3>Trinadh Reddy Vasipalli</h3>
+                        <p class="author-meta">Roll No. / ID: 92400118626</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Search Algorithm Performance Analyzer</p>
+        <p class="footer-sub">DSA Project &mdash; Linear Search vs Binary Search</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
